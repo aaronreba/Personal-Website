@@ -1,0 +1,319 @@
+{% extends "layout.html" %}
+
+{% block navbar %}
+
+<li><a href="/">Home</a></li>
+<li class="active"><a href="#">Resume</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+<h3>Resume</h3>
+
+<table class="table">
+  <tr>
+    <td>Aaron Reba</td>
+    <td>Austin, TX</td>
+  </tr>
+  <tr>
+    <td>aaronreba at gmail dot com</td>
+    <td><a href="http://www.github.com/aaronreba" target="_blank">github.com/aaronreba</a></td>
+  </tr>
+</table>
+
+<h3>Technical Skills</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>Experience</th>
+      <th>Uses</th>
+      <th>Libraries</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>Python</td>
+      <td>4 Years</td>
+      <td>
+        <ul>
+          <li>Scientific Simulations</li>
+          <li>Scientific Data Analysis</li>
+          <li>Web Development</li>
+          <li>Game Development</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="http://www.pythonware.com/products/pil/" target="_blank">Python Imaging Library</a></li>
+          <li><a href="http://www.matplotlib.org/" target="_blank">Matplotlib</a></li>
+          <li><a href="http://www.cython.org" target="_blank">Cython</a></li>
+          <li><a href="http://www.scipy.org" target="_blank">SciPy</a></li>
+          <li><a href="http://www.numpy.scipy.org" target="_blank">Numpy</a></li>
+          <li><a href="http://www.pocoo.org/projects/flask/" target="_blank">Flask</a></li>
+          <li><a href="http://www.pocoo.org/projects/jinja2/" target="_blank">Jinja2</a></li>
+          <li><a href="http://docs.pythonboto.org/en/latest/" target="_blank">Boto</a></li>
+          <li><a href="http://www.pygame.org" target="_blank">Pygame</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>BASH</td>
+      <td>3 Years</td>
+      <td>
+        <ul>
+          <li>Scripting for Scientific Data Analysis</li>
+          <li><a href="http://www.tacc.utexas.edu/user-services/user-guides/lonestar-user-guide" target="_blank">Navigating around UT's Super Computing Clusters</a></li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>C++</td>
+      <td>3 Years</td>
+      <td>
+        <ul>
+          <li>Scientific Data Analysis</li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>HTML and Javascript</td>
+      <td>8 Months</td>
+      <td>
+        <ul>
+          <li>Web Development</li>
+          <li>Internal Content Management Systems</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li><a href="http://twitter.github.com/bootstrap/index.html" target="_blank">Bootstrap</a></li>
+          <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Java</td>
+      <td>6 Months</td>
+      <td>
+        <ul>
+          <li>General Computing</li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>3 Months</td>
+      <td>
+        <ul>
+          <li>Familiar with UNIX libraries like threads, sockets, and pipes</li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Software Tools</th>
+      <th></th>
+      <th>Experience</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>UNIX Systems</td>
+      <td>
+        <ul>
+          <li>Ubuntu</li>
+          <li>CentOS</li>
+          <li>Mac OS X</li>
+        </ul>
+      </td>
+      <td>
+        3 Years
+      </td>
+    </tr>
+    <tr>
+      <td>Source Control</td>
+      <td><ul><li>Git</li><li>Mercurial</li></ul></td>
+      <td>1 Year</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Experience</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Apprentice Developer</th>
+      <th>Aug. 2012 - Present</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        CombinedIQ LLC
+        <ul>
+          <li>
+            Improving the integrity and robustness of the company's product by developing a management system using Flask, jQuery, and Handlebars.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+  
+  <thead>
+    <tr>
+      <th>Bioinformatics Developer</th>
+      <th>Oct. 2011 - Oct. 2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        University of Texas
+        <ul>
+          <li>Developed a simulation for an RNA folding experiment.</li>
+          <li>Developed part of a genome resequencer for short-read DNA fragments.</li>
+          <li>
+            Gave a public presentation on an algorithm used to find copied sections of
+            DNA and implemented this algorithm.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+  
+  <thead>
+    <tr>
+      <th>Collaborating with Graduate Student</th>
+      <th>June 2011 - Present</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        University of Texas
+        <ul>
+          <li>
+            Discussed software concepts at an easy-to-understand level with the
+            technologically unfamiliar student.
+          </li>
+          <li>
+            Wrote 40+ Python scripts to analyze plant DNA to determine which genes
+            affect seed oil composition.
+          </li>
+        </ul>
+      </td>
+    </tr> 
+  </tbody>
+  
+  <thead>
+    <tr>
+      <th>Teaching Assistant for Bioinformatics Class</th>
+      <th>May/Aug. 2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        University of Texas
+        <ul>
+          <li>
+            Teacher's assistant for in-depth, week-long class focused on teaching
+            bioinformatics tools and concepts.
+          </li>
+          <li>
+            Helped students use the Unix terminal and using bioinformatics tools through
+            the terminal.
+          </li>
+          <li>
+            Wrote most of the course material on the topics of using the university's
+            super computer and assembling genomes.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Publications</h3>
+
+<ul>
+  <li>
+    Reba, A., Meyer, A.G., <b>Barrick, J.E.</b> Computational tests of a
+    thermal cycling strategy to isolate more complex functional nucleic acid motifs
+    from random sequence pools by in vitro selection. In: C. Adami et al. (eds.).
+    <i>Artificial Life XIII: Proceedings of the Thirteenth International Conference on
+    the Synthesis and Simulation of Living Systems.</i> Cambridge, MA: MIT Press. 
+    <b>Won best paper in "Synthetic Biology" track at the conference.</b>
+  </li>
+  <li>
+    <b>Pelc, S.E.,</b> Reba, A., Linder, C.R. (in prep) The genetic basis of the adaptive
+    evolution of seed oil composition in Arabidopsis thaliana.
+  </li>
+</ul>
+
+<h3>Projects</h3>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td>
+        Currently using Python and Pygame to create a turnbased game.
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Wrote a MIPS Assembly Language simulator that supported instruction pipelining.
+      </td>
+      <td>
+        <a href="https://github.com/aaronreba/Low-Level-Logic/blob/master/mips_simulator.py" target="_blank">Link to GitHub</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Used logic simulator to create a 16-bit microprocessor based on the MIPS architecture.
+      </td>
+      <td>
+        <a href="https://raw.github.com/aaronreba/Low-Level-Logic/master/MIPS_processor.png" target="_blank">See an Image</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Education</h3>
+
+<table class="table">
+  <tr>
+    <th>Bachelor of Science in Computer Science</th>
+    <th>Aug. 2007 - Dec. 2010</th>
+  </tr>
+  
+  <tr>
+    <td>Texas State University - San Marcos</td>
+  </tr>
+  
+  <tr>
+    <td>GPA in Major: 3.30 / 4.0</td>
+  </tr>
+  
+  <tr>
+    <td>Minor: Math</td>
+  </tr>
+</table>
+
+{% endblock %}

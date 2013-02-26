@@ -8,14 +8,16 @@
 
 {% block navbar %}
 
-<li class="active"><a href="#">Home</a></li>
+<li><a href="/">Home</a></li>
 <li><a href="/resume">Resume</a></li>
-<li><a href="/images">Images</a></li>
+<li class="active"><a href="#">Images</a></li>
 
 {% endblock %}
 
 {% block content %}
 
-Here's my <a href="/resume">resume.</a>
+Here's a microprocessor I designed:<br>
+<img src="/static/images/MIPS_processor.png">
 
 {% endblock %}
+

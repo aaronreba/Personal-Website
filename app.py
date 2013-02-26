@@ -1,3 +1,6 @@
+import sys
+sys.path.append('./lib/python2.7/site-packages/')
+
 import os
 import flask
 
@@ -10,6 +13,10 @@ def index():
 @app.route('/resume')
 def resume():
     return flask.render_template('resume.html')
+
+@app.route('/images')
+def images():
+    return flask.render_template('images.html')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.

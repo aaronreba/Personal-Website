@@ -10,12 +10,32 @@
 
 <li class="active"><a href="#">Home</a></li>
 <li><a href="/resume">Resume</a></li>
-<li><a href="/images">Images</a></li>
 
 {% endblock %}
 
 {% block content %}
 
-Here's my <a href="/resume">resume.</a>
+<div>
+  Here's my <a href="/resume">resume.</a>
+</div>
+
+<div>
+<p>
+You might be asking yourself why a static HTML site was written with a Python backend. It's because I didn't want to spend the time to figure out how to host a static HTML site on Heroku.<br/>
+
+Incidentally, with Python I'm able to run a few calls to the OS to see how Heroku does things behind the scenes.<br/>
+
+From my interpretation of Heroku's documentation, the Heroku dyno running free hosting will stop running this app for at least 6 hours every 24 hours. If it has been at least 6 hours since the last request to the site, the application dies. If it has been running for 18 hours, the application will kill itself and not respond to requests for 6 hours.<br/>
+
+This site was deployed on April 21, 2018 around 5:00 UTC.<br/>
+This application was initialized at {{start_time}} UTC<br/>
+The current time is {{now}} UTC<br/>
+The operating system name is {{os_name}}<br/>
+The platform is {{platform_system}}<br/>
+The release is {{platform_release}}<br/>
+
+
+</p>
+</div>
 
 {% endblock %}

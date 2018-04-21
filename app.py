@@ -1,5 +1,4 @@
 import sys
-sys.path.append('./lib/python2.7/site-packages/')
 
 import os
 import platform

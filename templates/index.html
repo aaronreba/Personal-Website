@@ -33,7 +33,9 @@ The platform is {{platform_system}}<br/>
 The release is {{platform_release}}<br/>
 The directory structure is as follows:<br/>
 <br/>
-{%- for key, value in directory_map.items() recursive %}                       
+{% directory_structure %}
+<br/>
+{%- for key, value in directory_structure.items() recursive %}                       
   <li>{{ key }}                                                             
     {%- if value %}                                                         
       Recursive {{ key }}, {{value}}                                        

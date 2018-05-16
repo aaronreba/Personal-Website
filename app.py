@@ -40,7 +40,7 @@ def index():
     page_data['os_name'] = os_name
     page_data['platform_system'] = platform_system
     page_data['platform_release'] = platform_release
-    page_data['directory_map'] = directory_structure
+    page_data['directory_structure'] = directory_structure
 
     return flask.render_template(
         'index.html',

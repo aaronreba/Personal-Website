@@ -10,20 +10,21 @@ app = flask.Flask(__name__)
 
 start_time = datetime.datetime.utcnow()
 
-def get_directory_structure(rootdir):
+def get_directory_structure(directory_structure, rootdir):
     """
     Creates a nested dictionary that represents the folder structure of rootdir
-    Stolen from http://code.activestate.com/recipes/577879-create-a-nested-dictionary-from-oswalk/
     """
-    directory_tree = {}
-    rootdir = rootdir.rstrip(os.sep)
-    start = rootdir.rfind(os.sep) + 1
-    for path, dirs, files in os.walk(rootdir):
-        folders = path[start:].split(os.sep)
-        subdir = dict.fromkeys(files)
-        parent = reduce(dict.get, folders[:-1], directory_tree)
-        parent[folders[-1]] = subdir
-    return directory_tree
+
+    directory_structure[rootdir] = {}
+    try:
+      for child in os.listdir(rootdir):
+        child_path = os.path.join(rootdir, child)
+        if os.path.isdir(child_path):
+          get_directory_structure(directory_structure, child_path)
+        else:
+          directory_structure[rootdir][child_path] = {}
+    except PermissionError as e:
+      print('Could not list {}'.format(rootdir))
 
 @app.route('/')
 def index():
@@ -32,7 +33,8 @@ def index():
     platform_system = platform.system()
     platform_release = platform.release()
 
-    directory_structure = get_directory_structure('/')
+    directory_structure = {}
+    get_directory_structure(directory_structure, '/tmp')
 
     page_data = {}
     page_data['now'] = now

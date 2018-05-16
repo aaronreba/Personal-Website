@@ -16,23 +16,35 @@
 {% block content %}
 
 <div>
-  Here's my <a href="/resume">resume.</a>
-</div>
-
-<div>
 <p>
-You might be asking yourself why a static HTML site was written with a Python backend. It's because I didn't want to spend the time to figure out how to host a static HTML site on Heroku.<br/>
-
+This site uses a Python backend.<br/>
+<br/>
+You might be asking yourself why a mostly static HTML site was written with a Python backend. It's because I didn't want to spend the time to figure out how to host a static HTML site on Heroku.<br/>
+<br/>
 Incidentally, with Python I'm able to run a few calls to the OS to see how Heroku does things behind the scenes.<br/>
-
+<br/>
 From my interpretation of Heroku's documentation, the Heroku dyno running free hosting will stop running this app for at least 6 hours every 24 hours. If it has been at least 6 hours since the last request to the site, the application dies. If it has been running for 18 hours, the application will kill itself and not respond to requests for 6 hours.<br/>
-
-This site was deployed on April 21, 2018 around 5:00 UTC.<br/>
+<br/>
+This site was deployed some time around May 15, 2018.<br/>
 This application was initialized at {{start_time}} UTC<br/>
 The current time is {{now}} UTC<br/>
 The operating system name is {{os_name}}<br/>
 The platform is {{platform_system}}<br/>
 The release is {{platform_release}}<br/>
+The directory structure is as follows:<br/>
+<br/>
+{%- for key, value in directory_map.items() recursive %}                       
+  <li>{{ key }}                                                             
+    {%- if value %}                                                         
+      Recursive {{ key }}, {{value}}                                        
+      <ul>{{ loop(value.items())}}</ul>                                     
+    {%- endif %}                                                            
+  </li>                                                                     
+{%- endfor %} 
+
+I would have an open interpreter sending commands directly to the app but I'd rather not risk turning my freely hosted app into a bot.<br/>
+<br/>
+Anyway, <span>Here's my <a href="/resume">resume.</a></span>
 
 
 </p>

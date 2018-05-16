@@ -16,6 +16,7 @@ def index():
     os_name = os.name
     platform_system = platform.system()
     platform_release = platform.release()
+    directory_map = {'apples': {'pears': 'what'}}
 
     page_data = {}
     page_data['now'] = now
@@ -23,6 +24,7 @@ def index():
     page_data['os_name'] = os_name
     page_data['platform_system'] = platform_system
     page_data['platform_release'] = platform_release
+    page_data['directory_map'] = directory_map
 
     return flask.render_template(
         'index.html',

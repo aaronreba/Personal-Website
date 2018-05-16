@@ -16,7 +16,7 @@ def index():
     os_name = os.name
     platform_system = platform.system()
     platform_release = platform.release()
-    directory_map = {'apples': {'pears': 'what'}}
+    directory_map = {'apples': {'pears': {}}}
 
     page_data = {}
     page_data['now'] = now
@@ -37,4 +37,4 @@ def resume():
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=False)

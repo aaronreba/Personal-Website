@@ -37,7 +37,9 @@ The directory structure is as follows:<br/>
   <li>{{ key }}                                                             
     {%- if value %}                                                         
       Recursive {{ key }}, {{value}}                                        
-      <ul>{{ loop(value.items())}}</ul>                                     
+      {% if value is not None %}
+        <ul>{{ loop(value.items())}}</ul>                                     
+      {% endif %}
     {%- endif %}                                                            
   </li>                                                                     
 {%- endfor %} 

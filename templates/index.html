@@ -31,24 +31,28 @@ The current time is {{now}} UTC<br/>
 The operating system name is {{os_name}}<br/>
 The platform is {{platform_system}}<br/>
 The release is {{platform_release}}<br/>
-The directory structure is as follows:<br/>
-<br/>
-{{ directory_structure }}<br/>
-<br/>
-{%- for key, value in directory_structure.items() recursive %}                       
-  <li>{{ key }}                                                             
-    {%- if value %}                                                         
-      Recursive {{ key }}, {{value}}                                        
-      {% if value %}
-        <ul>{{ loop(value.items())}}</ul>                                     
-      {% endif %}
-    {%- endif %}                                                            
-  </li>                                                                     
-{%- endfor %} 
+The cpu count is {{cpu_count}}<br/>
+{#
+  Heroku probably doesn't want me listing the directory structure. It's not very interesting anyway.
+  The directory structure is as follows:<br/>
+  <br/>
+  {{ directory_structure }}<br/>
+  <br/>
+  {%- for key, value in directory_structure.items() recursive %}                       
+    <li>{{ key }}                                                             
+      {%- if value %}                                                         
+        Recursive {{ key }}, {{value}}                                        
+        {% if value %}
+          <ul>{{ loop(value.items())}}</ul>                                     
+        {% endif %}
+      {%- endif %}                                                            
+    </li>                                                                     
+  {%- endfor %} 
+#}
 
 I would have an open interpreter sending commands directly to the app but I'd rather not risk turning my freely hosted app into a bot.<br/>
 <br/>
-Anyway, <span>Here's my <a href="/resume">resume.</a></span>
+Anyway, Here's my <a href="/resume">resume.</a>
 
 
 </p>

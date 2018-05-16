@@ -33,8 +33,8 @@ def index():
     platform_system = platform.system()
     platform_release = platform.release()
 
-    directory_structure = {}
-    get_directory_structure(directory_structure, os.environ['HOME'])
+    # directory_structure = {}
+    # get_directory_structure(directory_structure, os.environ['HOME'])
 
     page_data = {}
     page_data['now'] = now
@@ -42,7 +42,8 @@ def index():
     page_data['os_name'] = os_name
     page_data['platform_system'] = platform_system
     page_data['platform_release'] = platform_release
-    page_data['directory_structure'] = directory_structure
+    page_data['cpu_count'] = os.cpu_count()
+    # page_data['directory_structure'] = directory_structure
 
     return flask.render_template(
         'index.html',

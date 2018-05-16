@@ -34,7 +34,7 @@ def index():
     platform_release = platform.release()
 
     directory_structure = {}
-    get_directory_structure(directory_structure, '/')
+    get_directory_structure(directory_structure, os.environ['HOME'])
 
     page_data = {}
     page_data['now'] = now

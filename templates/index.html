@@ -19,9 +19,7 @@
 <p>
 This site uses a Python backend.<br/>
 <br/>
-You might be asking yourself why a mostly static HTML site was written with a Python backend. It's because I didn't want to spend the time to figure out how to host a static HTML site on Heroku.<br/>
-<br/>
-Incidentally, with Python I'm able to run a few calls to the OS to see how Heroku does things behind the scenes.<br/>
+With Python I'm able to run a few calls to the OS to see how Heroku does things behind the scenes.<br/>
 <br/>
 From my interpretation of Heroku's documentation, the Heroku dyno running free hosting will stop running this app for at least 6 hours every 24 hours. If it has been at least 6 hours since the last request to the site, the application dies. If it has been running for 18 hours, the application will kill itself and not respond to requests for 6 hours. What this means is that the application initalization time listed below will never be greater than 18 hours ago.<br/>
 <br/>
@@ -49,12 +47,7 @@ The cpu count is {{cpu_count}}<br/>
   {%- endfor %} 
 #}
 <br/>
-I would have an open interpreter sending commands directly to the app but I'd rather not risk turning my freely hosted app into a bot.<br/>
-<br/>
-Anyway, Here's my <a href="/resume">resume.</a>
-Apples
-
-
+Here's my <a href="/resume">resume.</a>
 </p>
 </div>
 

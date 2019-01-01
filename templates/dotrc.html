@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block custom_head %}
+
+<title>Aaron Reba</title>
+
+{% endblock %}
+
+{% block navbar %}
+
+<li><a href="/">Home</a></li>
+<li><a href="/resume">Resume</a></li>
+<li class="active"><a href="#">dotrc</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+<div>
+<p>bash</p>
+<pre>
+export PS1="\u@\h:\w \d \t$ "
+
+alias grpe='grep'
+alias greo='grep'
+
+alias fgfg='fg'
+</pre>
+<br>
+<p>vim</p>
+<pre>
+map &lt;F2&gt; :noh&lt;CR&gt;
+map &lt;F7&gt; :tabp&lt;CR&gt;
+map &lt;F8&gt; :tabn&lt;CR&gt;
+map &lt;A-Up&gt; :resize +1&lt;CR&gt;
+map &lt;A-Down&gt; :resize -1&lt;CR&gt;
+map &lt;A-Left&gt; :vertical-resize +1&lt;CR&gt;
+map &lt;A-Right&gt; :vertical-resize -1&lt;CR&gt;
+colors torte
+set nu
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set nowrap
+
+hi PreProc ctermfg=Red
+
+hi spaceline ctermbg=Magenta
+match spaceline /^ \+$/
+
+vnoremap &lt;F6&gt; :call Get_visual_selection()&lt;cr&gt;
+
+function! Get_visual_selection()
+  " Why is this not a built-in Vim script function?!
+  let [lnum1, col1] = getpos("'&lt;")[1:2]
+  let [lnum2, col2] = getpos("'&gt;")[1:2]
+  let lines = getline(lnum1, lnum2)
+  let lines[-1] = lines[-1][: col2 - (&amp;selection == 'inclusive' ? 1 : 2)]
+  let lines[0] = lines[0][col1 - 1:]
+  let selection = join(lines,'\n')
+  let change = input('Change the selection with: ')
+  execute ":'&lt;,'&gt;s/".selection."/".change."/g"
+endfunction
+
+set isk+=-
+</pre>
+</div>
+
+{% endblock %}

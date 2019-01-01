@@ -53,6 +53,10 @@ def index():
 def resume():
     return flask.render_template('resume.html')
 
+@app.route('/dotrc')
+def dotrc():
+    return flask.render_template('dotrc.html')
+
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))

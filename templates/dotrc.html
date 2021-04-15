@@ -17,6 +17,7 @@
 {% block content %}
 
 <div>
+
 <p>bash</p>
 <pre>
 export PS1="\u@\h:\w \d \t$ "
@@ -26,7 +27,9 @@ alias greo='grep'
 
 alias fgfg='fg'
 </pre>
+
 <br>
+
 <p>vim</p>
 <pre>
 map &lt;F2&gt; :noh&lt;CR&gt;
@@ -49,22 +52,26 @@ hi PreProc ctermfg=Red
 hi spaceline ctermbg=Magenta
 match spaceline /^ \+$/
 
-vnoremap &lt;F6&gt; :call Get_visual_selection()&lt;cr&gt;
-
-function! Get_visual_selection()
-  " Why is this not a built-in Vim script function?!
-  let [lnum1, col1] = getpos("'&lt;")[1:2]
-  let [lnum2, col2] = getpos("'&gt;")[1:2]
-  let lines = getline(lnum1, lnum2)
-  let lines[-1] = lines[-1][: col2 - (&amp;selection == 'inclusive' ? 1 : 2)]
-  let lines[0] = lines[0][col1 - 1:]
-  let selection = join(lines,'\n')
-  let change = input('Change the selection with: ')
-  execute ":'&lt;,'&gt;s/".selection."/".change."/g"
-endfunction
-
-set isk+=-
+" set isk+=-
 </pre>
+
+<br>
+
+<p>tmux</p>
+<pre>
+set -g prefix C-a
+
+unbind-key C-b
+bind-key C-a send-prefix
+
+set-option -g repeat-time 0
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+</pre>
+
 </div>
 
 {% endblock %}
